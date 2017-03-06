@@ -50,6 +50,8 @@ void setup() {
     Serial.begin(115200);
     Serial.setDebugOutput(true);
 
+    digitalWrite(LEDPin,LOW);
+
     WiFi.mode(WIFI_AP_STA);
 
     WiFi.begin(ssid, password);
@@ -104,7 +106,7 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
     //ArduinoOTA.handle();
-    delay(5000);
+
 
     int randomclient,prevrandomclient;
 
